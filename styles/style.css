@@ -10,6 +10,7 @@
 */
 
 .page {
+  padding-bottom: 105px;
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
   font-size: var(--main-text-size);
   background-image: var(--background-image),
@@ -23,7 +24,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" 400, "wdth" 0;
-  padding-bottom: 105px;
 }
 
 .card {
@@ -48,10 +48,6 @@
   block-size: 48.334vw;
 }
 
-.card__description-text {
-  text-shadow: 2px 2px 25px gray;
-}
-
 .image__container {
   position: relative;
 }
@@ -62,8 +58,9 @@
   right: 25px;
   z-index: 1;
   opacity: 0.5;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-size: var(--accent-text-size);
+  text-shadow: 1px 1px #fff;
   mix-blend-mode: hard-light;
 }
 
@@ -96,19 +93,19 @@
 }
 
 .button {
-  cursor: pointer;
-  padding: 0;
   position: relative;
-  font-family: var(--accent-font);
-  font-size: var(--accent-text-size);
-  background: none;
   display: flex;
-  transition: box-shadow 0.3s linear;
   justify-content: center;
   align-items: center;
   border: 2px solid black;
+  padding: 0;
   color: #fff;
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
+  font-size: var(--accent-text-size);
+  background: none;
   background-color: #fff;
+  transition: box-shadow 0.3s linear;
+  cursor: pointer;
 }
 
 .button__text {
@@ -119,13 +116,13 @@
 
 .button__container {
   display: flex;
-  align-items: center;
   justify-content: end;
+  align-items: center;
 }
 
 .card__icon-button {
-  background: none;
   border: none;
+  background: none;
 }
 
 .like-icon {
@@ -135,16 +132,24 @@
 
 /* анимация кнопок */
 
-.card__icon-button:focus,
+/* .card__icon-button:focus,
 .card__like-button:focus,
 .save-button:focus {
   outline: none;
+} */
+
+button:focus{
+  outline: none;
 }
 
-.card__like-button:focus-visible,
-.save-button:focus-visible {
+button:not(.card__icon-button):focus-visible {
   box-shadow: 2px 2px 0 black;
 }
+
+/* .card__like-button:focus-visible,
+.save-button:focus-visible {
+  box-shadow: 2px 2px 0 black;
+} */
 
 .button:after {
   content: "";
@@ -178,34 +183,33 @@
   opacity: 0;
 }
 
-
 /* стили картинок различных карточек */
 
-.road__image {
+.filter__contrast {
   filter: contrast(75%);
 }
 
-.autumn__image {
+.filter__opacity {
   filter: opacity(0.8);
 }
 
-.perfect__image {
+.filter__sepia {
   filter: sepia(30%);
 }
 
-.flowers__image {
+.filter__multiple {
   filter: grayscale(0.1) saturate(158%);
 }
 
-.just-do__image {
+.filter__blur {
   filter: blur(0.03rem);
 }
 
-.stars__image {
+.filter__invert {
   filter: invert(0.1);
 }
 
-.now__image {
+.filter__shadow {
   filter: drop-shadow(5px 15px 30px white);
 }
 
@@ -218,9 +222,10 @@
   align-items: center;
   gap: 20px;
   border: 2px solid black;
-  font-family: var(--accent-font);
+  padding-block-start: 128px;
+  padding-block-end: 128px;
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   background-color: var(--background-color);
-  block-size: 368px;
 }
 
 .header__title {
@@ -238,7 +243,6 @@
   margin-bottom: 67px;
 }
 
-
 /* modal */
 
 .dialog {
@@ -254,7 +258,6 @@
   text-transform: uppercase;
   transition: opacity 0.3s ease-in-out;
   inline-size: 353px;
-  block-size: 191px;
 }
 
 .dialog:not([open]) {
@@ -263,14 +266,14 @@
 }
 
 .text-dialog {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   line-height: 140%;
   max-inline-size: 234px;
 }
 
 .button-modal__text {
   border: 2px solid black;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   background-color: transparent;
   cursor: pointer;
   inline-size: 100%;
@@ -286,10 +289,10 @@
 }
 
 .save-button {
-  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 8px;
+  margin: 0 auto;
   border: 2px solid black;
   padding: 15px 20px;
   background-color: var(--background-color);
@@ -299,11 +302,11 @@
 }
 
 .save-button svg {
-  color: currentColor;
-  display: block;
   position: relative;
-  inline-size: 21px;
   z-index: 2;
+  display: block;
+  color: currentColor;
+  inline-size: 21px;
   mix-blend-mode: difference;
 }
 
@@ -311,7 +314,6 @@
   width: 266px;
   border: none;
 }
-
 
 @media (width <= 375px) {
   .save-button {
