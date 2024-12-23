@@ -45,7 +45,7 @@
 
 .like-icon.is-liked .contour {
   fill: var(--heart-main, #f00);
-  transition: 0.3s 0.06s;
+  transition: 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .heart {
