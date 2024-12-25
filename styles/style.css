@@ -48,7 +48,6 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
-  /* block-size: 48.334vw; */
   block-size: 100%;
 }
 
@@ -85,7 +84,6 @@
   gap: 27px;
   padding: 25px;
   line-height: 1.17;
-  /* padding-block-start: 21px; */
 }
 
 .my-opinion {
@@ -122,6 +120,10 @@ button {
   color: white;
   order: 1;
   mix-blend-mode: difference;
+}
+
+.dialog-button__text {
+  text-transform: uppercase;
 }
 
 .button__container {
