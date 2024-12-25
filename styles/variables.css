@@ -12,3 +12,8 @@
   --sparks-color: red;
   --heart-main: red;  
 }
+
+
+.is-liked .countour {
+  --counter-color: var(--heart-main);
+}
